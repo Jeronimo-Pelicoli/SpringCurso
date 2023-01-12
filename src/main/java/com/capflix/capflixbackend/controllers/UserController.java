@@ -23,13 +23,12 @@ public class UserController {
         return "Hello";
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
     @ResponseStatus(code = HttpStatus.CREATED)
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public UserSaidaDTO create(@Valid @RequestBody UserEntradaDTO userEntrada) {
         return userService.createUser(userEntrada);
     }
-
 
     @GetMapping("list")
     public List<UserSaidaDTO> ListAll() {
