@@ -19,7 +19,7 @@ public class UserService {
     public UserSaidaDTO createUser(UserEntradaDTO user) {
         User userModel = new User(user.getName(), user.getPassword(), user.getEmail());
         User userBanco = userRepository.save(userModel);
-        UserSaidaDTO userSaida = new UserSaidaDTO(user.getName(), user.getPassword(), user.getEmail());
+        UserSaidaDTO userSaida = new UserSaidaDTO(userBanco.getName(), userBanco.getPassword(), userBanco.getEmail());
         return userSaida;
     }
 
