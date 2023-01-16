@@ -1,11 +1,11 @@
-package com.capflix.capflixbackend.rest.dto.movieDto;
+package com.capflix.capflixbackend.dto.saidaDTO;
 
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 @Data
-public class MovieEntranceDto {
+public class MovieExitDto {
 
     @NotEmpty(message="not null")
     @Size(max=50, message="máximo de trinta caracteres")
@@ -23,5 +23,11 @@ public class MovieEntranceDto {
     @Size(max=1000, message="máximo de um mil caracteres")
     private String description;
 
+    public MovieExitDto (String name, String gender, String url, String description){
+        this.name = name;
+        this.gender = gender;
+        this.url=url;
+        this.description = description;
+    }
 
 }

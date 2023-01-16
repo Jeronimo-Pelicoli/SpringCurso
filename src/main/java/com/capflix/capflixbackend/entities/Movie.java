@@ -1,9 +1,8 @@
-package com.capflix.capflixbackend.model;
+package com.capflix.capflixbackend.entities;
 
 import lombok.Data;
 
 import javax.persistence.*;
-import java.io.Serial;
 import java.io.Serializable;
 
 @Data
@@ -11,7 +10,6 @@ import java.io.Serializable;
 @Table(name = "TB_MOVIE")
 public class Movie implements Serializable {
 
-    @Serial
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -37,7 +35,6 @@ public class Movie implements Serializable {
     }
 
     public Movie ( String name, String gender, String url, String description){
-        this.id = id;
         this.name = name;
         this.gender = gender;
         this.url=url;

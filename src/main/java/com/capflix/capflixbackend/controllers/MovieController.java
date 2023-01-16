@@ -1,9 +1,8 @@
-package com.capflix.capflixbackend.rest.controller;
+package com.capflix.capflixbackend.controllers;
 
-import com.capflix.capflixbackend.model.Movie;
-import com.capflix.capflixbackend.repository.MovieRepository;
-import com.capflix.capflixbackend.rest.dto.movieDto.MovieEntranceDto;
-import com.capflix.capflixbackend.rest.dto.movieDto.MovieExitDto;
+import com.capflix.capflixbackend.repositories.MovieRepository;
+import com.capflix.capflixbackend.dto.entradaDTO.MovieEntranceDto;
+import com.capflix.capflixbackend.dto.saidaDTO.MovieExitDto;
 import com.capflix.capflixbackend.services.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
